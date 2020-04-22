@@ -10,9 +10,9 @@ package mantenimientoempl;
  * @author ASUS VivoBook
  */
 public class Empleado {
-    //Atributos 
+    //Atributos //empleos
     private int edad;
-    private String foto;
+    private String foto; 
     private int numTel;
     private int cedula;
     private String nombre;
