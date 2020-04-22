@@ -18,7 +18,7 @@ public class Empleado {
     private String nombre;
     private String localizacion;
     
-    //Conectores
+    //Constructores
     public Empleado
         (int edad, String foto, int numTel, int cedula, String nombre,
                 String Localizacion){
@@ -85,3 +85,5 @@ public class Empleado {
      
              
              }
+
+
