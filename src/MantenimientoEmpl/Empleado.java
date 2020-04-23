@@ -10,9 +10,9 @@ package mantenimientoempl;
  * @author ASUS VivoBook
  */
 public class Empleado {
-    //Atributos //empleos
+    //Atributos 
     private int edad;
-    private String foto; 
+    private String foto;
     private int numTel;
     private int cedula;
     private String nombre;
@@ -20,17 +20,18 @@ public class Empleado {
     
     //Constructores
     public Empleado
-        (int edad, String foto, int numTel, int cedula, String nombre,
+        (int edad, int numTel, int cedula, String nombre,
                 String Localizacion){
             
             this.edad = edad;
-            this.foto = foto;
             this.numTel = numTel;
             this.cedula = cedula;
             this.nombre = nombre;
-            this.localizacion = localizacion;
+            this.localizacion = Localizacion;
             
         }
+        
+        
             
      //Metodos
      
@@ -81,6 +82,7 @@ public class Empleado {
      public void setLocalizacion(String localizacion){
          this.localizacion = localizacion;
      }
+     
      
      
              
