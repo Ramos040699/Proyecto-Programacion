@@ -14,14 +14,14 @@ import javax.swing.JOptionPane;
 public class ControladorEmp {
     
    public void iniciar(int edad, int numTel, int cedula, String nombre, String localizacion){
-      Empleado EMP = new Empleado();
-      EMP.setEdad(edad);
-      EMP.setNumTel(numTel);
-      EMP.setCedula(cedula);
-      EMP.setNombre(nombre);
-      EMP.setLocalizacion(localizacion);
+      Empleado prueba = new Empleado();
+      prueba.setEdad(edad);
+      prueba.setNumTel(numTel);
+      prueba.setCedula(cedula);
+      prueba.setNombre(nombre);
+      prueba.setLocalizacion(localizacion);
       
-      EMP.guardaremp(EMP);
+      prueba.guardaremp(prueba);
       
       
       

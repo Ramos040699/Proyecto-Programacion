@@ -14,7 +14,6 @@ public class Empleado {
     
     //Atributos 
     private int edad;
-    private String foto;
     private int numTel;
     private int cedula;
     private String nombre;
@@ -33,7 +32,9 @@ public class Empleado {
             
         }
         
-        
+     public Empleado (){
+         
+     }   
             
      //Metodos
      

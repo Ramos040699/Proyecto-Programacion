@@ -218,7 +218,7 @@ public class GUIEmpl extends javax.swing.JFrame {
     private void cuadroLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cuadroLActionPerformed
         // TODO add your handling code here:
     /*    cuadroL.setText("");
-        String Localicacion = cuadroL.getText(); */
+        String Localizacion = cuadroL.getText(); */
     }//GEN-LAST:event_cuadroLActionPerformed
 
     private void cuadroNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cuadroNActionPerformed
@@ -234,6 +234,11 @@ public class GUIEmpl extends javax.swing.JFrame {
          String localizacion = cuadroL.getText();
         ctrl.iniciar(edad, numTel, cedula, nombre, localizacion);
         
+        cuadroE.setText("");
+        cuadroT.setText("");
+        cuadroC.setText("");
+        cuadroN.setText("");
+        cuadroL.setText("");
     }
     
     
