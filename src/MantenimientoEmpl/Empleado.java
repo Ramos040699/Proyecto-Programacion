@@ -4,12 +4,14 @@
  * and open the template in the editor.
  */
 package mantenimientoempl;
+import java.util.ArrayList;
 
 /**
  *
  * @author ASUS VivoBook
  */
 public class Empleado {
+    
     //Atributos 
     private int edad;
     private String foto;
@@ -42,14 +44,7 @@ public class Empleado {
      public void setEdad(int edad){
          this.edad = edad;
      }
-     
-     public String getFoto(){
-         return foto;
-     }
-     
-     public void setFoto(String foto){
-         this.foto = foto;
-     }
+  
      
      public int getNumTel(){
          return numTel;
@@ -83,9 +78,14 @@ public class Empleado {
          this.localizacion = localizacion;
      }
      
+     ArrayList <Empleado> pin = new ArrayList();
+     
+     public void guardaremp(Empleado EMP){
+         pin.add(EMP);
+     }
      
      
              
-             }
+}
 
 

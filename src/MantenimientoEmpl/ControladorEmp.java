@@ -13,6 +13,24 @@ import javax.swing.JOptionPane;
  */
 public class ControladorEmp {
     
+   public void iniciar(int edad, int numTel, int cedula, String nombre, String localizacion){
+      Empleado EMP = new Empleado();
+      EMP.setEdad(edad);
+      EMP.setNumTel(numTel);
+      EMP.setCedula(cedula);
+      EMP.setNombre(nombre);
+      EMP.setLocalizacion(localizacion);
+      
+      EMP.guardaremp(EMP);
+      
+      
+      
+   }
+       
+       
+       
+   
+    
 }
     
    
