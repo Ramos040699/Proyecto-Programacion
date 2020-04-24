@@ -12,13 +12,14 @@ package MantenimientoServicios;
  */
 public class ControllerSer {
      public void iniciar(int ID, int NumEmpleado, String Nombre, String Servicio){
-//      ServiciosM prueba = new ServiciosM();
-//      prueba.setID(txtID);
-//      prueba.setNumEmpleado(NumEmpleado);
-//      prueba.setNombre(Nombre);
-//      prueba.setServicio(Servicio);
-//      
-//      
-//      prueba.guardaremp(prueba);
+      ServiciosM prueba= new ServiciosM();
+      
+      prueba.setID(ID);
+      prueba.setNumEmpleado(NumEmpleado);
+      prueba.setNombre(Nombre);
+      prueba.setServicio(Servicio);
+      
+      
+      prueba.guardaremp(prueba);
      } 
 }

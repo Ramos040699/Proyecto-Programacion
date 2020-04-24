@@ -5,7 +5,6 @@
  */
 package MantenimientoServicios;
 import java.util.ArrayList;
-import mantenimientoempl.Empleado;
 
 /**
  *
@@ -27,7 +26,9 @@ public class ServiciosM {
             this.Nombre = Nombre;
             this.Servicio = Servicio;
         }
-        
+         public ServiciosM(){
+         
+     }   
      
      public int getID(){
          return ID;
