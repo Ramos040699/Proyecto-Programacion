@@ -18,10 +18,10 @@ public class Servicios {
     private String NombreServicios;
     
     public Servicios
-        (int ID, String Nombre){
+        (int ID, String NombreServicios){
             
             this.ID = ID;
-            this.NombreServicios = Nombre;
+            this.NombreServicios = NombreServicios;
         }
     public Servicios(){
          

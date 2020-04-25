@@ -58,14 +58,29 @@ public class MantServicios extends javax.swing.JFrame {
         });
 
         btnguar.setText("Guardar");
+        btnguar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnguarActionPerformed(evt);
+            }
+        });
 
         btncan.setText("Cancelar");
+        btncan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btncanActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText(" ID:");
 
         jLabel2.setText("Nombre de servicio:");
 
         btnmostrar.setText("Mostrar");
+        btnmostrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnmostrarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -127,23 +142,23 @@ public class MantServicios extends javax.swing.JFrame {
     private void txtNomServActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomServActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNomServActionPerformed
-    private void btnguarActionPerformed(java.awt.event.ActionEvent evt) { 
+
+    private void btnguarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnguarActionPerformed
        /*servicios.setID(Integer.parseInt(txtID.getText()));
        servicios.setNombreServicios(txtNomServ.getText());
        servicios.guardaremp(servicios);*/
        JOptionPane.showMessageDialog(null, "Los datos se han guardado correctamente", 
-                                  "Éxito en la operación", JOptionPane.INFORMATION_MESSAGE);
-    }
-    private void btnmostrarActionPerformed(java.awt.event.ActionEvent evt) {
-  
-       jTextArea1.setText(servicios.mostraremp());
+                                  "Éxito en la operación", JOptionPane.INFORMATION_MESSAGE); // TODO add your handling code here:
+    }//GEN-LAST:event_btnguarActionPerformed
 
-    }  
+    private void btnmostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmostrarActionPerformed
+      jTextArea1.setText(servicios.mostraremp());   // TODO add your handling code here:
+    }//GEN-LAST:event_btnmostrarActionPerformed
 
-    private void btncanActionPerformed(java.awt.event.ActionEvent evt) {                                         
-       System.exit(0); 
-    }                                        
-
+    private void btncanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncanActionPerformed
+      System.exit(0);   // TODO add your handling code here:
+    }//GEN-LAST:event_btncanActionPerformed
+                                                 
 
     /**
      * @param args the command line arguments

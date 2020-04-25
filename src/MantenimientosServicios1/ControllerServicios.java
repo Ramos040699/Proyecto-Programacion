@@ -12,7 +12,8 @@ package MantenimientosServicios1;
  */
 public class ControllerServicios {
  public void iniciar(){
-      Servicios envia = new Servicios();
+      Servicios envia;
+     envia = new Servicios();
       MantServicios mant = new MantServicios(); 
       
       mant.mostrarvista();
