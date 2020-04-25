@@ -46,7 +46,7 @@ public class MantenimientoUsuario extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         ListaU = new javax.swing.JTextArea();
         jButton2 = new javax.swing.JButton();
-        jTextField6 = new javax.swing.JTextField();
+        ID2 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -127,6 +127,11 @@ public class MantenimientoUsuario extends javax.swing.JFrame {
         jLabel8.setText("Cedula:");
 
         jButton3.setText("Eliminar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -169,7 +174,7 @@ public class MantenimientoUsuario extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel8)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(ID2, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jButton3)
@@ -193,7 +198,7 @@ public class MantenimientoUsuario extends javax.swing.JFrame {
                                 .addComponent(jLabel7)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(ID2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel8))
                                 .addGap(18, 18, 18)
                                 .addComponent(jButton3))
@@ -271,6 +276,19 @@ public class MantenimientoUsuario extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(rootPane, "Usuario Agregado");
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+       
+        int cedula = Integer.valueOf(ID2.getText());
+        boolean DEL=control.EliminarUsuario(cedula);
+        ID2.setText("");
+        if(DEL==true){
+        JOptionPane.showMessageDialog(rootPane, "Usuario Eliminado");
+      }
+        else{
+        JOptionPane.showMessageDialog(rootPane, "Usuario no encontrado");
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -308,6 +326,7 @@ public class MantenimientoUsuario extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField CardNu;
+    private javax.swing.JTextField ID2;
     private javax.swing.JTextArea ListaU;
     private javax.swing.JTextField Locat;
     private javax.swing.JTextField Phone;
@@ -325,6 +344,5 @@ public class MantenimientoUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField6;
     // End of variables declaration//GEN-END:variables
 }
