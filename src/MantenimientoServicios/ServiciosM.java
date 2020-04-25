@@ -26,9 +26,9 @@ public class ServiciosM {
             this.Nombre = Nombre;
             this.Servicio = Servicio;
         }
-         public ServiciosM(){
+    public ServiciosM(){
          
-     }   
+    }   
      
      public int getID(){
          return ID;
@@ -68,5 +68,18 @@ public class ServiciosM {
      public void guardaremp(ServiciosM SerM){
          list.add(SerM);
      }
-    
+     public String mostraremp(){
+         int i = 0;
+         String datos = "";
+         do {
+          String temp = list.get(i).toString();
+          datos = datos + "\n" + temp;
+          
+          i++;        
+         } while(i<=list.size());
+         
+         return datos;
+        
+     }    
+
 }

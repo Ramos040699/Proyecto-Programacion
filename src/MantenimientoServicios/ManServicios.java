@@ -5,6 +5,8 @@
  */
 package MantenimientoServicios;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author schav
@@ -313,7 +315,8 @@ public class ManServicios extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void GuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarActionPerformed
-      
+       JOptionPane.showMessageDialog(null, "Los datos se han guardado correctamente", 
+                                  "Éxito en la operación", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_GuardarActionPerformed
 
     private void CancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelarActionPerformed
