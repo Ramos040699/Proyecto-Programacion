@@ -13,36 +13,47 @@ public class BDController {
     
     public void iniciar(){
  
-        BaseDatos calc = new BaseDatos(); //Se instancia la clase del modelo. 
-        BDVsita cv = new BDVsita();
+        BaseDatos bd = new BaseDatos(); //Se instancia la clase del modelo. 
+        BDVsita vista = new BDVsita();
         
-        /*boolean estado = false;
+        boolean estado = false;
         do {
             try {
-                cv.solicitarPrimerNumero(); //le decimos a la Vista que solicite el primer numero y se lo pase al controller
-                cv.solicitarSegundoNumero(); //le decimos a la Vista que solicite el segundo numero y se lo pase al controller
-
-                String operacion = cv.solicitarOperacion(); //le decimos a la Vista que solicite la operacion y la retorne
-                switch (operacion) {
+                String trans = vista.solicitarTransaccion();
+                switch (trans) {
+                    case "E":
+                        vista.solicitaDatosEmp();
+                        estado = false;
+                        break;
+                    case "C":
+                        vista.solicitaDatosClient();
+                        estado = false;
+                        break;
                     case "S":
-                        cv.mostrarResultado(calc.suma());
+                        vista.solicitaDatosServicio();
                         estado = false;
                         break;
-                    case "R":
-                        cv.mostrarResultado(calc.resta());
+                    case "K":
+                        vista.solicitaDatosContrato();
                         estado = false;
                         break;
-
+                    case "M":
+                        vista.solicitarListaMostrar();
+                        estado = false;
+                        break;                        
+                    case "Q":
+                        estado = true;
+                        break;
                     default:
                         throw new Exception();
-                }
+                }    
             }
             catch (NullPointerException e){
-                cv.mostrarMensajePersonalizado(CalculadoraView.ERROR_VACIO); //se usa CalculadoraView.ERROR_VACIO y no cv.ERROR_VACIO por se varible estatica
+                vista.muestraMsgerror(BDVsita.error); 
             }
             catch (Exception e) {
-                cv.mostrarMensajeErrorGeneral(); //este error se muestra x ej al dividir 2 entre 0
+                vista.mostrarMsgerror1();
             }
-        } while (estado == false); */
+        } while (estado == false); 
     }
 }
