@@ -77,42 +77,52 @@ public class MEmpleados {
     public void setLocalizacion(String localizacion) {
         this.localizacion = localizacion;
     }
+
+    public ArrayList<MEmpleados> getRegistro() {
+        return registro;
+    }
+
+    public void setRegistro(ArrayList<MEmpleados> registro) {
+        this.registro = registro;
+    }
+    
     
          
-     ArrayList <MEmpleados> pin = new ArrayList();
+     ArrayList <MEmpleados> registro = new ArrayList();
      
-     public void guardaremp(MEmpleados EMP){
-         pin.add(EMP);
+     public void guardaremp(String nombre, int cedula, int edad, String localizacion, int numeroTel){
+         Registro emp = new Registro(nombre,cedula,edad,localizacion,numeroTel);         
+         //registro.add(emp);
      }
+    
+     
+     public String mostraremp(){
+         int i = 0;
+         String datos = "";
+         do {
+         // String temp = registro.get(i);
+         // datos = datos + "\n" + temp;
+          
+          i++;        
+         } while(i<registro.size());
+         
+         return datos;
+        
+     }     
 
     @Override
     public String toString() {
          int i = 0;
          String datos = "";
          do {
-          String temp = pin.get(i).toString();
+          String temp = registro.get(i).toString();
           datos = datos + "\n" + temp;
           
           i++;        
-         } while(i<=pin.size());
+         } while(i<=registro.size());
          
          return datos; //To change body of generated methods, choose Tools | Templates.
     }
- 
-     
-     
-     /*public String mostraremp(){
-         int i = 0;
-         String datos = "";
-         do {
-          String temp = pin.get(i).toString();
-          datos = datos + "\n" + temp;
-          
-          i++;        
-         } while(i<=pin.size());
-         
-         return datos;
-        
-     } */   
+  
      
 }

@@ -188,12 +188,12 @@ public class GUIempleados extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         MEmpleados emple = new MEmpleados();
-        emple.setEdad(Integer.valueOf(txtEd.getText()));
-        emple.setNombre(txtNom.getText());
-        emple.setCedula(Integer.valueOf(txtCed.getText()));
-        emple.setNumTel(Integer.valueOf(txtPho.getText()));
-        emple.setLocalizacion(txtLoc.getText());
-        emple.guardaremp(emple);
+        int cedula = Integer.valueOf(txtCed.getText());
+        int edad = Integer.valueOf(txtEd.getText());
+        String location = txtLoc.getText();
+        String nom = txtNom.getText();        
+        int phone = Integer.valueOf(txtPho.getText());
+        emple.guardaremp(nom, cedula, edad, location, phone);
         txtNom.setText("");
         txtEd.setText("");
         txtCed.setText("");
@@ -208,8 +208,11 @@ public class GUIempleados extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         MEmpleados borrar = new MEmpleados();
-        String texto = borrar.toString();
+        System.out.print("Prueba1");
+        String texto = borrar.mostraremp();
+        System.out.print("Prueba2");        
         jTextArea1.setText(texto);   
+        
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
