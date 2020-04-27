@@ -6,6 +6,7 @@
 package MantenEmpleados;
 
 import java.util.ArrayList;
+import proyecto.programacion.Usuario;
 
 /**
  *
@@ -78,51 +79,33 @@ public class MEmpleados {
         this.localizacion = localizacion;
     }
 
-    public ArrayList<MEmpleados> getRegistro() {
+    public ArrayList<Registro> getRegistro() {
         return registro;
     }
 
-    public void setRegistro(ArrayList<MEmpleados> registro) {
+    public void setRegistro(ArrayList<Registro> registro) {
         this.registro = registro;
     }
     
     
          
-     ArrayList <MEmpleados> registro = new ArrayList();
+     ArrayList <Registro> registro = new ArrayList();
      
      public void guardaremp(String nombre, int cedula, int edad, String localizacion, int numeroTel){
          Registro emp = new Registro(nombre,cedula,edad,localizacion,numeroTel);         
-         //registro.add(emp);
-     }
-    
-     
-     public String mostraremp(){
-         int i = 0;
-         String datos = "";
-         do {
-         // String temp = registro.get(i);
-         // datos = datos + "\n" + temp;
-          
-          i++;        
-         } while(i<registro.size());
-         
-         return datos;
-        
+         registro.add(emp);
+         System.out.print(registro.get(0));
      }     
-
+    
     @Override
     public String toString() {
-         int i = 0;
-         String datos = "";
-         do {
-          String temp = registro.get(i).toString();
-          datos = datos + "\n" + temp;
-          
-          i++;        
-         } while(i<=registro.size());
-         
-         return datos; //To change body of generated methods, choose Tools | Templates.
-    }
-  
+        String texto="";
+        for(int i=0;i<registro.size();i++){
+            Registro temp = registro.get(i);
+            texto += temp.toString()+"\n";
+        }
+        return texto;
+        }
+    
      
 }

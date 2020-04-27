@@ -14,10 +14,13 @@ import MantenEmpleados.MEmpleados;
  */
 public class GUIempleados extends javax.swing.JFrame {
 
+    MEmpleados memple;     
+
     /**
      * Creates new form GUIempleados
      */
     public GUIempleados() {
+        memple = new MEmpleados();
         initComponents();
     }
 
@@ -39,7 +42,6 @@ public class GUIempleados extends javax.swing.JFrame {
         jTextArea1 = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -85,13 +87,6 @@ public class GUIempleados extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setText("Eliminar");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-
         jLabel1.setText("Edad");
 
         jLabel2.setText("Nombre");
@@ -131,9 +126,7 @@ public class GUIempleados extends javax.swing.JFrame {
                         .addGap(33, 33, 33))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton1)
-                        .addGap(34, 34, 34)
-                        .addComponent(jButton3)
-                        .addGap(139, 139, 139)
+                        .addGap(243, 243, 243)
                         .addComponent(jButton2)
                         .addContainerGap(51, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
@@ -172,9 +165,7 @@ public class GUIempleados extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton1)
-                            .addComponent(jButton3))
+                        .addComponent(jButton1)
                         .addGap(25, 25, 25))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
@@ -201,16 +192,11 @@ public class GUIempleados extends javax.swing.JFrame {
         txtPho.setText("");
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
-
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        MEmpleados borrar = new MEmpleados();
-        System.out.print("Prueba1");
-        String texto = borrar.mostraremp();
-        System.out.print("Prueba2");        
+        String texto = memple.toString();
+        System.out.print("Prueba");  //Como ejemplo al darle mostrar datos
+        System.out.print(texto);         
         jTextArea1.setText(texto);   
         
         
@@ -266,7 +252,6 @@ public class GUIempleados extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
